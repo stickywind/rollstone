@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
+import Views from '@/views'
+import FormButton from '@/views/form/button'
 
 Vue.use(Router)
 
@@ -8,8 +9,13 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'HelloWorld',
-      component: HelloWorld
+      name: 'Views',
+      component: Views
+    },
+    {
+      path: '/FormButton',
+      name: 'FormButton',
+      component: FormButton
     }
   ]
 })
