@@ -1,6 +1,6 @@
 <template>
   <div class="rs-button">
-    <button :class="[rsBtnType, rsBtnSize]">11</button>
+    <button :class="[rsBtnType, rsBtnSize, rsRound]"><slot></slot></button>
   </div>
 </template>
 
@@ -15,7 +15,8 @@ export default {
     size: {
       type: String,
       default: 'normal'
-    }
+    },
+    round: Boolean
   },
   data () {
     return {
@@ -28,6 +29,9 @@ export default {
     },
     rsBtnSize () {
       return (this.size !== '' ? `rs-btn-${this.size}` : '')
+    },
+    rsRound () {
+      return this.round ? `rs-btn-round` : ''
     }
   }
 }
@@ -59,10 +63,35 @@ export default {
     font-size 14px
     border-radius 4px
   // 按钮颜色组
+  button
+    &:focus
+      background #ecf5ff
+      border-color #c6e2ff
+      color #409eff
+    &:hover
+      background #ecf5ff
+      border-color #c6e2ff
+      color #409eff
+    &:active
+      outline none
+      border-color #3a8ee6
+      color #3a8ee6
   .rs-btn-success
     color #fff
     background-color #67c23a
     border-color #67c23a
+    &:focus
+      background #85ce61
+      border-color #85ce61
+      color #fff
+    &:hover
+      background #85ce61
+      border-color #85ce61
+      color #fff
+    &:active
+      color #fff
+      background #5daf34
+      border-color #5daf34
   .rs-btn-primary
     color #fff
     background-color #409eff
@@ -79,6 +108,38 @@ export default {
       color #fff
       background #3a8ee6
       border-color #3a8ee6
+  .rs-btn-warn
+    color #fff
+    background-color #e6a23c
+    border-color #e6a23c
+    &:focus
+      background #ebb563
+      border-color #ebb563
+      color #fff
+    &:hover
+      background #ebb563
+      border-color #ebb563
+      color #fff
+    &:active
+      color #fff
+      background #cf9236
+      border-color #cf9236
+  .rs-btn-danger
+    color #fff
+    background-color #f56c6c
+    border-color #f56c6c
+    &:focus
+      background #f78989
+      border-color #f78989
+      color #fff
+    &:hover
+      background #f78989
+      border-color #f78989
+      color #fff
+    &:active
+      color #fff
+      background #dd6161
+      border-color #dd6161
   // 按钮组大小
   .rs-btn-mini
     padding 7px 15px
@@ -92,4 +153,7 @@ export default {
     padding 10px 20px
     font-size 14px
     border-radius 4px
+  // 圆角
+  .rs-btn-round
+    border-radius 20px
 </style>
