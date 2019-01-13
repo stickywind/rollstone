@@ -14,11 +14,11 @@
         type="success">
         成功按钮
       </rs-button>
-       <rs-button
+      <rs-button
         type="warn">
         警告按钮
       </rs-button>
-       <rs-button
+      <rs-button
         type="danger">
         危险按钮
       </rs-button>
@@ -64,21 +64,72 @@
         round>
         成功按钮
       </rs-button>
-       <rs-button
+      <rs-button
         type="warn"
         round>
         警告按钮
       </rs-button>
-       <rs-button
+      <rs-button
         type="danger"
         round>
         危险按钮
       </rs-button>
     </div>
-    <p>
-      size: 大小，
-      type: 按钮样式，
-    </p>
+    <h4>5</h4>
+    <div>
+      <rs-button
+        circle>
+        1
+      </rs-button>
+      <rs-button
+        type="primary"
+        circle>
+        2
+      </rs-button>
+      <rs-button
+        type="success"
+        circle>
+        3
+      </rs-button>
+      <rs-button
+        type="warn"
+        circle>
+        4
+      </rs-button>
+      <rs-button
+        type="danger"
+        circle>
+        5
+      </rs-button>
+    </div>
+    <h4>6</h4>
+    <div>
+      <rs-button
+        disabled>
+        默认按钮
+      </rs-button>
+      <rs-button
+        type="primary"
+        disabled>
+        主要按钮
+      </rs-button>
+      <rs-button
+        type="success"
+        disabled>
+        成功按钮
+      </rs-button>
+      <rs-button
+        type="warn"
+        disabled>
+        警告按钮
+      </rs-button>
+      <rs-button
+        type="danger"
+        disabled>
+        危险按钮
+      </rs-button>
+    </div>
+    <hr>
     <table border="1" style="width:100%;">
       <thead>
         <tr>
@@ -103,8 +154,20 @@
       <tr>
         <td>round</td>
         <td>Boolean</td>
-        <td>false</td>
+        <td>false | true</td>
         <td>圆角</td>
+      </tr>
+      <tr>
+        <td>circle</td>
+        <td>Boolean</td>
+        <td>false | true</td>
+        <td>圆型按钮</td>
+      </tr>
+      <tr>
+        <td>disabled</td>
+        <td>Boolean</td>
+        <td>false | true</td>
+        <td>禁用状态</td>
       </tr>
     </table>
   </div>

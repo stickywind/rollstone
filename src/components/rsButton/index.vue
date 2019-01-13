@@ -1,6 +1,6 @@
 <template>
   <div class="rs-button">
-    <button :class="[rsBtnType, rsBtnSize, rsRound]"><slot></slot></button>
+    <button :class="[rsBtnType, rsBtnSize, rsRound, rsCircle, rsDisabled]"><slot></slot></button>
   </div>
 </template>
 
@@ -16,7 +16,9 @@ export default {
       type: String,
       default: 'normal'
     },
-    round: Boolean
+    round: Boolean,
+    circle: Boolean,
+    disabled: Boolean
   },
   data () {
     return {
@@ -32,6 +34,12 @@ export default {
     },
     rsRound () {
       return this.round ? `rs-btn-round` : ''
+    },
+    rsCircle () {
+      return this.circle ? `rs-btn-circle` : ''
+    },
+    rsDisabled () {
+      return this.disabled ? `rs-btn-disabled` : ''
     }
   }
 }
@@ -156,4 +164,30 @@ export default {
   // 圆角
   .rs-btn-round
     border-radius 20px
+  // 圆角-圆形
+  .rs-btn-circle
+    border-radius 50%
+    padding 12px
+  // 禁用
+  button.rs-btn-disabled
+    color #c0c4cc
+    cursor not-allowed
+    background-color #fff
+    border-color #ebeef5
+  .rs-btn-primary.rs-btn-disabled
+    color #fff
+    background-color #a0cfff
+    border-color #a0cfff
+  .rs-btn-success.rs-btn-disabled
+    color #fff
+    background-color #b3e19d
+    border-color #b3e19d
+  .rs-btn-warn.rs-btn-disabled
+    color #fff
+    background-color #f3d19e
+    border-color #f3d19e
+  .rs-btn-danger.rs-btn-disabled
+    color #fff
+    background-color #fab6b6
+    border-color #fab6b6
 </style>
