@@ -79,27 +79,27 @@
     <div>
       <rs-button
         circle>
-        1
+        <span style="display: inline-block;width: 16px;height: 16px;">1</span>
       </rs-button>
       <rs-button
         type="primary"
         circle>
-        2
+        <span style="display: inline-block;width: 16px;height: 16px;">2</span>
       </rs-button>
       <rs-button
         type="success"
         circle>
-        3
+        <span style="display: inline-block;width: 16px;height: 16px;">3</span>
       </rs-button>
       <rs-button
         type="warn"
         circle>
-        4
+        <span style="display: inline-block;width: 16px;height: 16px;">4</span>
       </rs-button>
       <rs-button
         type="danger"
         circle>
-        5
+        <span style="display: inline-block;width: 16px;height: 16px;">5</span>
       </rs-button>
     </div>
     <h4>6</h4>
@@ -176,7 +176,7 @@
 <script>
 import rsButton from '@/components/rsButton'
 export default {
-  name: 'Button',
+  name: 'formButton',
   components: {
     rsButton
   },
