@@ -15,5 +15,3 @@ selenium-debug.log
 *.ntvs*
 *.njsproj
 *.sln
-src/views/form/button.vue
-src/views/form/button.vue
