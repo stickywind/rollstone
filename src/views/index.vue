@@ -4,6 +4,7 @@
     <h2>Essential Links</h2>
     <router-link :to="{path: '/FormButton'}">rsButton</router-link>
     <router-link :to="{path: '/FormSwitch'}">rsSwitch</router-link>
+    <router-link :to="{path: '/ElementIcon'}">rsIcon</router-link>
   </div>
 </template>
 

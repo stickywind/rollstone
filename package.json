@@ -14,7 +14,10 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "feather-icons": "^4.10.0",
+    "font-awesome": "^4.7.0",
     "vue": "^2.5.2",
+    "vue-feather-icons": "^4.10.0",
     "vue-router": "^3.0.1"
   },
   "devDependencies": {

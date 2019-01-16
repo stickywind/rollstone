@@ -1,17 +1,23 @@
 <template>
   <div class="rs-switch">
-    <span>111</span>
-    <span>222</span>
-    <activity-icon></activity-icon>
+    <!-- <p>1.vue-feather-icons</p>
+    <activity-icon></activity-icon> -->
+    <i :class="['fa', `fa-${icon}`]"></i>
   </div>
 </template>
 
 <script>
 import { ActivityIcon } from 'vue-feather-icons'
 export default {
-  name: 'rsSwitch',
+  name: 'rsIcon',
   components: {
     ActivityIcon
+  },
+  props: {
+    icon: {
+      type: String,
+      default: ''
+    }
   },
   mounted () {
   }
