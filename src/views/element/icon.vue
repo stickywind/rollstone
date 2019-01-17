@@ -38,7 +38,7 @@ export default {
   .showIcon
     &>div
       display inline-block
-      margin 0 10px
+      margin 10px 10px
       .fa
         transition all .1s linear
         cursor pointer

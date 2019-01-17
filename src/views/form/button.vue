@@ -131,7 +131,7 @@
     </div>
     <h4>7</h4>
     <div>
-      <div>
+      <div style="margin: 10px 0px;">
         <rs-button
           disabled>
           <rs-icon icon="check"></rs-icon>
@@ -157,7 +157,7 @@
           <rs-icon icon="check"></rs-icon>
         </rs-button>
       </div>
-      <div>
+      <div style="margin: 10px 0px;">
         <rs-button
           round>
           <rs-icon icon="check"></rs-icon>
@@ -183,7 +183,7 @@
           <rs-icon icon="check"></rs-icon>
         </rs-button>
       </div>
-      <div>
+      <div style="margin: 10px 0px;">
         <rs-button
           circle>
           <rs-icon icon="check"></rs-icon>
@@ -209,7 +209,7 @@
           <rs-icon icon="check"></rs-icon>
         </rs-button>
       </div>
-      <div>
+      <div style="margin: 10px 0px;">
         <rs-button>
           默认按钮
         </rs-button>
