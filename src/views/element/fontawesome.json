@@ -1,0 +1,16 @@
+{
+  "status": "1",
+  "data": [
+    {"name": "circle"},
+    {"name": "times"},
+    {"name": "bank"},
+    {"name": "bars"},
+    {"name": "bug"},
+    {"name": "bus"},
+    {"name": "cab"},
+    {"name": "camera"},
+    {"name": "cloud"},
+    {"name": "check"},
+    {"name": "close"}
+  ]
+}

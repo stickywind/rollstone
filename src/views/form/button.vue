@@ -129,6 +129,108 @@
         危险按钮
       </rs-button>
     </div>
+    <h4>7</h4>
+    <div>
+      <div>
+        <rs-button
+          disabled>
+          <rs-icon icon="check"></rs-icon>
+        </rs-button>
+        <rs-button
+          type="primary"
+          disabled>
+          <rs-icon icon="check"></rs-icon>
+        </rs-button>
+        <rs-button
+          type="success"
+          disabled>
+          <rs-icon icon="check"></rs-icon>
+        </rs-button>
+        <rs-button
+          type="warn"
+          disabled>
+          <rs-icon icon="check"></rs-icon>
+        </rs-button>
+        <rs-button
+          type="danger"
+          disabled>
+          <rs-icon icon="check"></rs-icon>
+        </rs-button>
+      </div>
+      <div>
+        <rs-button
+          round>
+          <rs-icon icon="check"></rs-icon>
+        </rs-button>
+        <rs-button
+          type="primary"
+          round>
+          <rs-icon icon="check"></rs-icon>
+        </rs-button>
+        <rs-button
+          type="success"
+          round>
+          <rs-icon icon="check"></rs-icon>
+        </rs-button>
+        <rs-button
+          type="warn"
+          round>
+          <rs-icon icon="check"></rs-icon>
+        </rs-button>
+        <rs-button
+          type="danger"
+          round>
+          <rs-icon icon="check"></rs-icon>
+        </rs-button>
+      </div>
+      <div>
+        <rs-button
+          circle>
+          <rs-icon icon="check"></rs-icon>
+        </rs-button>
+        <rs-button
+          type="primary"
+          circle>
+          <rs-icon icon="check"></rs-icon>
+        </rs-button>
+        <rs-button
+          type="success"
+          circle>
+          <rs-icon icon="check"></rs-icon>
+        </rs-button>
+        <rs-button
+          type="warn"
+          circle>
+          <rs-icon icon="check"></rs-icon>
+        </rs-button>
+        <rs-button
+          type="danger"
+          circle>
+          <rs-icon icon="check"></rs-icon>
+        </rs-button>
+      </div>
+      <div>
+        <rs-button>
+          默认按钮
+        </rs-button>
+        <rs-button
+          type="primary">
+          <rs-icon icon="check"></rs-icon> 主要按钮
+        </rs-button>
+        <rs-button
+          type="success">
+          成功按钮 <rs-icon icon="check"></rs-icon>
+        </rs-button>
+        <rs-button
+          type="warn">
+          <rs-icon icon="bars"></rs-icon> 警告按钮
+        </rs-button>
+        <rs-button
+          type="danger">
+          危险按钮 <rs-icon icon="times"></rs-icon>
+        </rs-button>
+      </div>
+    </div>
     <hr>
     <table border="1" style="width:100%;">
       <thead>
@@ -175,10 +277,12 @@
 
 <script>
 import rsButton from '@/components/rsButton'
+import rsIcon from '@/components/rsIcon'
 export default {
   name: 'formButton',
   components: {
-    rsButton
+    rsButton,
+    rsIcon
   },
   data () {
     return {
