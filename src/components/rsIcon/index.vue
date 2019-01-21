@@ -2,7 +2,7 @@
   <div class="rs-icon">
     <!-- <p>1.vue-feather-icons</p>
     <activity-icon></activity-icon> -->
-    <i :class="['fa', `fa-${icon}`]"></i>
+    <i :class="[iconfontType]"></i>
   </div>
 </template>
 
@@ -17,6 +17,18 @@ export default {
     icon: {
       type: String,
       default: ''
+    },
+    iconType: {
+      type: String,
+      default: 'fa'
+    }
+  },
+  computed: {
+    iconfontType () {
+      let str = ''
+      if (this.iconType) str = `fa fa-${this.icon}`
+      if (this.iconType === 'iconfont') str = `iconfont icon-${this.icon}`
+      return str
     }
   },
   mounted () {

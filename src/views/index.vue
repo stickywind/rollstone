@@ -1,8 +1,7 @@
 <template>
   <div class="pageIndex">
-    <img src="../assets/logo.png">
+    <img src="../assets/images/logo.png">
     <h2>Essential Links</h2>
-    <i class="iconfont icon-plus"></i>
     <router-link :to="{path: '/FormButton'}">rsButton</router-link>
     <router-link :to="{path: '/FormSwitch'}">rsSwitch</router-link>
     <router-link :to="{path: '/ElementIcon'}">rsIcon</router-link>
