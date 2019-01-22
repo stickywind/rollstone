@@ -56,12 +56,15 @@ export default {
       border-radius 6px
       box-shadow 0px 4px 30px rgba(0, 0, 0, .1) inset
       padding-top 10px
+      transition all .2s linear
       .fa, .iconfont
         transition all .1s linear
         cursor pointer
         &:hover
           transform scale(2)
           color #41b6e6
+      &:hover
+        box-shadow 0px 4px 30px rgba(0, 0, 0, .4)
       .iconfont
         display inline-block
       p
