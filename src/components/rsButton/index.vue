@@ -1,6 +1,6 @@
 <template>
   <div class="rs-button">
-    <button :class="[rsBtnType, rsBtnSize, rsRound, rsCircle, rsDisabled]"><slot></slot></button>
+    <button :class="[rsBtnType, rsBtnSize, rsRound, rsCircle, rsDisabled]" @click="handleClick"><slot></slot></button>
   </div>
 </template>
 
@@ -40,6 +40,11 @@ export default {
     },
     rsDisabled () {
       return this.disabled ? `rs-btn-disabled` : ''
+    }
+  },
+  methods: {
+    handleClick (evt) {
+      this.$emit('click', evt)
     }
   }
 }

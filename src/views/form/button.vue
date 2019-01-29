@@ -42,9 +42,9 @@
         默认按钮
       </rs-button>
     </div>
-    <h4>3</h4>
+    <h4>3.点击事件click</h4>
     <div>
-      <rs-button @click.native="test">
+      <rs-button @click="test()">
         默认按钮
       </rs-button>
     </div>
@@ -291,7 +291,7 @@ export default {
   },
   methods: {
     test () {
-      alert()
+      alert(1)
     }
   }
 }

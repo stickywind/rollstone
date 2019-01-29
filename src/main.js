@@ -7,6 +7,9 @@ import router from './router'
 import 'font-awesome/css/font-awesome.min.css'
 // iconfont
 import '@/assets/css/iconfont.css'
+// import VueFeatherIcon from 'vue-feather-icon'
+
+// Vue.use(VueFeatherIcon)
 
 Vue.config.productionTip = false
 

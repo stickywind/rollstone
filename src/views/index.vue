@@ -5,6 +5,7 @@
     <router-link :to="{path: '/FormButton'}">rsButton</router-link>
     <router-link :to="{path: '/FormSwitch'}">rsSwitch</router-link>
     <router-link :to="{path: '/ElementIcon'}">rsIcon</router-link>
+    <router-link :to="{path: '/ElementIcon'}">国际化</router-link>
   </div>
 </template>
 

@@ -2,17 +2,17 @@
   <div class="rs-switch">
     <span>111</span>
     <span>222</span>
-    <activity-icon></activity-icon>
+    <!-- <activity-icon></activity-icon> -->
   </div>
 </template>
 
 <script>
-import { ActivityIcon } from 'vue-feather-icons'
+// import { ActivityIcon } from 'vue-feather-icons'
 export default {
   name: 'rsSwitch',
-  components: {
-    ActivityIcon
-  },
+  // components: {
+  //   ActivityIcon
+  // },
   mounted () {
   }
 }
