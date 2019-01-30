@@ -1,6 +1,9 @@
 <template>
   <div class="rs-button">
-    <button :class="[rsBtnType, rsBtnSize, rsRound, rsCircle, rsDisabled]" @click="handleClick"><slot></slot></button>
+    <button :class="[rsBtnType, rsBtnSize, rsRound, rsCircle, rsDisabled]" @click="handleClick">
+      <canvas class="hamonCan" v-if="hamon" @click="ripple"></canvas>
+      <slot></slot>
+    </button>
   </div>
 </template>
 
@@ -18,11 +21,21 @@ export default {
     },
     round: Boolean,
     circle: Boolean,
-    disabled: Boolean
+    disabled: Boolean,
+    hamon: Boolean
   },
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      msg: 'Welcome to Your Vue.js App',
+      initialized: false,
+      timer: null,
+      speed: 3,
+      opacity: 0.4,
+      speedOpacity: 0,
+      radius: 0,
+      origin: {},
+      context: null,
+      color: ''
     }
   },
   computed: {
@@ -45,6 +58,72 @@ export default {
   methods: {
     handleClick (evt) {
       this.$emit('click', evt)
+    },
+    init (el) {
+      const oBtn = el.parentElement
+      this.color = this.getStyle(el.parentElement, 'color')
+      const w = this.getStyleNumber(oBtn, 'width')
+      // 透明度的速度
+      this.speedOpacity = (this.speed / w) * this.opacity
+      // canvas 宽和高
+      el.width = w
+      el.height = this.getStyleNumber(oBtn, 'height')
+      this.context = el.getContext('2d')
+    },
+    ripple (event) {
+      // 清除上次没有执行的动画
+      if (this.timer) {
+        window.cancelAnimationFrame(this.timer)
+      }
+      this.el = event.target
+      // 执行初始化
+      if (!this.initialized) {
+        this.initialized = true
+        this.init(this.el)
+      }
+      this.radius = 0
+      // 点击坐标原点
+      this.origin.x = event.offsetX
+      this.origin.y = event.offsetY
+      this.context.clearRect(0, 0, this.el.width, this.el.height)
+      this.el.style.opacity = this.opacity
+      this.draw()
+    },
+    draw () {
+      this.context.beginPath()
+      // 绘制波纹
+      this.context.arc(this.origin.x, this.origin.y, this.radius, 0, 2 * Math.PI, false)
+      this.context.fillStyle = this.color
+      this.context.fill()
+      // 定义下次的绘制半径和透明度
+      this.radius += this.speed
+      this.el.style.opacity -= this.speedOpacity
+      // 通过判断半径小于元素宽度或者还有透明度，不断绘制圆形
+      if (this.radius < this.el.width || this.el.style.opacity > 0) {
+        this.timer = window.requestAnimationFrame(this.draw)
+      } else {
+        // 清除画布
+        this.context.clearRect(0, 0, this.el.width, this.el.height)
+        this.el.style.opacity = 0
+      }
+    },
+    destroyed () {
+      // 清除上次没有执行的动画
+      if (this.timer) {
+        window.cancelAnimationFrame(this.timer)
+        this.timer = null
+      }
+    },
+    getStyle (el, attr, pseudoClass = null) {
+      return window.getComputedStyle(el, pseudoClass)[attr]
+    },
+    getStyleNumber (el, attr, pseudoClass = null) {
+      try {
+        const val = this.getStyle(el, attr, pseudoClass)
+        return parseFloat(val)
+      } catch (e) {
+        console.error(e)
+      }
     }
   }
 }
@@ -75,6 +154,8 @@ export default {
     padding 12px 20px
     font-size 14px
     border-radius 4px
+    overflow hidden
+    position relative
   // 按钮颜色组
   button
     &:focus
@@ -195,4 +276,11 @@ export default {
     color #fff
     background-color #fab6b6
     border-color #fab6b6
+  .hamonCan
+    opacity 0
+    position absolute
+    top 0
+    left 0
+    width 100%
+    height 100%
 </style>

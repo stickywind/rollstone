@@ -231,6 +231,34 @@
         </rs-button>
       </div>
     </div>
+    <h4>8.波纹按钮</h4>
+    <div>
+      <rs-button
+        hamon
+        @click="test">
+        默认按钮
+      </rs-button>
+      <rs-button
+        type="primary"
+        hamon>
+        主要按钮
+      </rs-button>
+      <rs-button
+        type="success"
+        hamon>
+        成功按钮
+      </rs-button>
+      <rs-button
+        type="warn"
+        hamon>
+        警告按钮
+      </rs-button>
+      <rs-button
+        type="danger"
+        hamon>
+        危险按钮
+      </rs-button>
+    </div>
     <hr>
     <table border="1" style="width:100%;">
       <thead>
