@@ -4,6 +4,7 @@ import Views from '@/views'
 import FormButton from '@/views/form/button'
 import FormSwitch from '@/views/form/switch'
 import ElementIcon from '@/views/element/icon'
+import ElementQuote from '@/views/element/quote'
 
 Vue.use(Router)
 
@@ -28,6 +29,11 @@ export default new Router({
       path: '/ElementIcon',
       name: 'ElementIcon',
       component: ElementIcon
+    },
+    {
+      path: '/ElementQuote',
+      name: 'ElementQuote',
+      component: ElementQuote
     }
   ]
 })

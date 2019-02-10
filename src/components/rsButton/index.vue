@@ -1,7 +1,7 @@
 <template>
   <div class="rs-button">
     <button :class="[rsBtnType, rsBtnSize, rsRound, rsCircle, rsDisabled]" @click="handleClick">
-      <canvas class="hamonCan" v-if="hamon" @click="ripple"></canvas>
+      <canvas class="hamonCan" v-if="hamon" @click="rippleCanvas"></canvas>
       <slot></slot>
     </button>
   </div>
@@ -27,6 +27,7 @@ export default {
   data () {
     return {
       msg: 'Welcome to Your Vue.js App',
+      ele: null,
       initialized: false,
       timer: null,
       speed: 3,
@@ -59,37 +60,36 @@ export default {
     handleClick (evt) {
       this.$emit('click', evt)
     },
-    init (el) {
+    initCanvas (el) {
       const oBtn = el.parentElement
       this.color = this.getStyle(el.parentElement, 'color')
-      const w = this.getStyleNumber(oBtn, 'width')
-      // 透明度的速度
-      this.speedOpacity = (this.speed / w) * this.opacity
       // canvas 宽和高
-      el.width = w
+      el.width = this.getStyleNumber(oBtn, 'width')
       el.height = this.getStyleNumber(oBtn, 'height')
+      // 透明度的速度
+      this.speedOpacity = (this.speed / el.width) * this.opacity
       this.context = el.getContext('2d')
     },
-    ripple (event) {
+    rippleCanvas (event) {
       // 清除上次没有执行的动画
       if (this.timer) {
         window.cancelAnimationFrame(this.timer)
       }
-      this.el = event.target
+      this.ele = event.target
       // 执行初始化
       if (!this.initialized) {
         this.initialized = true
-        this.init(this.el)
+        this.initCanvas(this.ele)
       }
       this.radius = 0
       // 点击坐标原点
       this.origin.x = event.offsetX
       this.origin.y = event.offsetY
-      this.context.clearRect(0, 0, this.el.width, this.el.height)
-      this.el.style.opacity = this.opacity
-      this.draw()
+      this.context.clearRect(0, 0, this.ele.width, this.ele.height)
+      this.ele.style.opacity = this.opacity
+      this.drawCanvas()
     },
-    draw () {
+    drawCanvas () {
       this.context.beginPath()
       // 绘制波纹
       this.context.arc(this.origin.x, this.origin.y, this.radius, 0, 2 * Math.PI, false)
@@ -97,14 +97,14 @@ export default {
       this.context.fill()
       // 定义下次的绘制半径和透明度
       this.radius += this.speed
-      this.el.style.opacity -= this.speedOpacity
+      this.ele.style.opacity -= this.speedOpacity
       // 通过判断半径小于元素宽度或者还有透明度，不断绘制圆形
-      if (this.radius < this.el.width || this.el.style.opacity > 0) {
-        this.timer = window.requestAnimationFrame(this.draw)
+      if (this.radius < this.ele.width || this.ele.style.opacity > 0) {
+        this.timer = window.requestAnimationFrame(this.drawCanvas)
       } else {
         // 清除画布
-        this.context.clearRect(0, 0, this.el.width, this.el.height)
-        this.el.style.opacity = 0
+        this.context.clearRect(0, 0, this.ele.width, this.ele.height)
+        this.ele.style.opacity = 0
       }
     },
     destroyed () {
@@ -276,6 +276,7 @@ export default {
     color #fff
     background-color #fab6b6
     border-color #fab6b6
+  // 波纹Canvas
   .hamonCan
     opacity 0
     position absolute

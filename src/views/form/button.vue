@@ -1,7 +1,6 @@
 <template>
   <div class="form-button">
-    <p>1.ele按钮</p>
-    <h4>1</h4>
+    <h4>1.ele按钮</h4>
     <div>
       <rs-button>
         默认按钮
@@ -23,7 +22,7 @@
         危险按钮
       </rs-button>
     </div>
-    <h4>2</h4>
+    <h4>2.按钮大小</h4>
     <div>
       <rs-button
         size="mini">
@@ -42,13 +41,7 @@
         默认按钮
       </rs-button>
     </div>
-    <h4>3.点击事件click</h4>
-    <div>
-      <rs-button @click="test()">
-        默认按钮
-      </rs-button>
-    </div>
-    <h4>4</h4>
+    <h4>3.圆角按钮</h4>
     <div>
       <rs-button
         round>
@@ -75,7 +68,7 @@
         危险按钮
       </rs-button>
     </div>
-    <h4>5</h4>
+    <h4>4.圆形按钮</h4>
     <div>
       <rs-button
         circle>
@@ -102,7 +95,7 @@
         <span style="display: inline-block;width: 16px;height: 16px;">5</span>
       </rs-button>
     </div>
-    <h4>6</h4>
+    <h4>5.禁用状态</h4>
     <div>
       <rs-button
         disabled>
@@ -129,9 +122,9 @@
         危险按钮
       </rs-button>
     </div>
-    <h4>7</h4>
+    <h4>6.嵌套图标</h4>
     <div>
-      <div style="margin: 10px 0px;">
+      <div class="colspanDiv">
         <rs-button
           disabled>
           <rs-icon icon="check"></rs-icon>
@@ -157,7 +150,7 @@
           <rs-icon icon="check"></rs-icon>
         </rs-button>
       </div>
-      <div style="margin: 10px 0px;">
+      <div class="colspanDiv">
         <rs-button
           round>
           <rs-icon icon="check"></rs-icon>
@@ -183,7 +176,7 @@
           <rs-icon icon="check"></rs-icon>
         </rs-button>
       </div>
-      <div style="margin: 10px 0px;">
+      <div class="colspanDiv">
         <rs-button
           circle>
           <rs-icon icon="check"></rs-icon>
@@ -209,7 +202,7 @@
           <rs-icon icon="check"></rs-icon>
         </rs-button>
       </div>
-      <div style="margin: 10px 0px;">
+      <div class="colspanDiv">
         <rs-button>
           默认按钮
         </rs-button>
@@ -231,11 +224,10 @@
         </rs-button>
       </div>
     </div>
-    <h4>8.波纹按钮</h4>
-    <div>
+    <h4>7.波纹动画按钮</h4>
+    <div class="colspanDiv">
       <rs-button
-        hamon
-        @click="test">
+        hamon>
         默认按钮
       </rs-button>
       <rs-button
@@ -259,6 +251,24 @@
         危险按钮
       </rs-button>
     </div>
+    <div class="colspanDiv">
+      <rs-button
+        type="primary"
+        hamon>
+        <rs-icon icon="check"></rs-icon> 主要按钮
+      </rs-button>
+    </div>
+    <h4>8.点击事件click</h4>
+    <div>
+      <rs-button @click="test()">
+        默认按钮
+      </rs-button>
+      <rs-button
+        hamon
+        @click="test">
+        默认按钮
+      </rs-button>
+    </div>
     <hr>
     <table border="1" style="width:100%;">
       <thead>
@@ -269,36 +279,44 @@
           <th>说明</th>
         </tr>
       </thead>
-      <tr>
-        <td>size</td>
-        <td>String</td>
-        <td>normal | medium | small | mini</td>
-        <td>大小</td>
-      </tr>
-      <tr>
-        <td>type</td>
-        <td>String</td>
-        <td>primary | success | warn | danger</td>
-        <td>按钮类型</td>
-      </tr>
-      <tr>
-        <td>round</td>
-        <td>Boolean</td>
-        <td>false | true</td>
-        <td>圆角</td>
-      </tr>
-      <tr>
-        <td>circle</td>
-        <td>Boolean</td>
-        <td>false | true</td>
-        <td>圆型按钮</td>
-      </tr>
-      <tr>
-        <td>disabled</td>
-        <td>Boolean</td>
-        <td>false | true</td>
-        <td>禁用状态</td>
-      </tr>
+      <tbody>
+        <tr>
+          <td>size</td>
+          <td>String</td>
+          <td>normal | medium | small | mini</td>
+          <td>大小</td>
+        </tr>
+        <tr>
+          <td>type</td>
+          <td>String</td>
+          <td>primary | success | warn | danger</td>
+          <td>按钮类型</td>
+        </tr>
+        <tr>
+          <td>round</td>
+          <td>Boolean</td>
+          <td>false | true</td>
+          <td>圆角</td>
+        </tr>
+        <tr>
+          <td>circle</td>
+          <td>Boolean</td>
+          <td>false | true</td>
+          <td>圆型按钮</td>
+        </tr>
+        <tr>
+          <td>disabled</td>
+          <td>Boolean</td>
+          <td>false | true</td>
+          <td>禁用状态</td>
+        </tr>
+        <tr>
+          <td>hamon</td>
+          <td>Boolean</td>
+          <td>false | true</td>
+          <td>波纹Canvas</td>
+        </tr>
+      </tbody>
     </table>
   </div>
 </template>
@@ -326,6 +344,7 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-
+<style scoped lang="stylus">
+.colspanDiv
+  margin 10px 0px
 </style>
