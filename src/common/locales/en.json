@@ -1,0 +1,8 @@
+{
+  "message": {
+    "hello": "hello",
+    "world": "world",
+    "save": "save",
+    "cancel": "cancel"
+  }
+}

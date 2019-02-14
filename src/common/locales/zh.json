@@ -1,0 +1,8 @@
+{
+  "message": {
+    "hello": "你好",
+    "world": "世界",
+    "save": "保存",
+    "cancel": "取消"
+  }
+}

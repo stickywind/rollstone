@@ -7,7 +7,7 @@
     <router-link :to="{path: '/ElementIcon'}">rsIcon</router-link>
     <router-link :to="{path: '/FormPayInput'}">rsPayInput</router-link>
     <router-link :to="{path: '/ElementQuote'}">rsQuote</router-link>
-    <router-link :to="{path: '/ElementIcon'}">国际化</router-link>
+    <router-link :to="{path: '/ElementI18n'}">国际化</router-link>
   </div>
 </template>
 
