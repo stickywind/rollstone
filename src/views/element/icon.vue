@@ -1,13 +1,13 @@
 <template>
   <div class="element-icon">
-    <p>1.font awesome</p>
+    <h4>1.font awesome</h4>
     <div class="showIcon">
       <div v-for="(item, index) in fontawesomeData" :key="index">
         <rs-icon :icon="item.name"></rs-icon>
         <p>fa-{{item.name}}</p>
       </div>
     </div>
-    <p>2.iconfont</p>
+    <h4>2.iconfont</h4>
     <div class="showIcon">
       <div v-for="(item, index) in iconfontData" :key="index">
         <rs-icon :icon="item.name" iconType="iconfont"></rs-icon>
