@@ -23,6 +23,7 @@
     <div>
       <rs-quote type="danger">Lorem ipsum dolor sit amet <a href="">consectetur</a> consectetur adipisicing elit. Porro incidunt dolores voluptatum quidem similique <a href="">similique</a>. Consectetur modi veniam similique, magni natus quia aut inventore quo culpa placeat! Adipisci, doloremque consequatur. Asperiores.</rs-quote>
     </div>
+    <hr>
     <table border="1" style="width:100%;">
       <thead>
         <tr>

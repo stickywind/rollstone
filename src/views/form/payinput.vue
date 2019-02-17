@@ -1,14 +1,19 @@
 <template>
   <div class="formPayInput">
     <h4>1.文本输入</h4>
-    <rs-pay-input v-model="inputValue"></rs-pay-input>
-    <p>value: {{inputValue}}</p>
+    <div>
+      <rs-pay-input v-model="inputValue"></rs-pay-input>
+      <p>value: {{inputValue}}</p>
+    </div>
     <h4>2.密码输入</h4>
-    <rs-pay-input
-      v-model="passwordValue"
-      type="password">
-    </rs-pay-input>
+    <div>
+      <rs-pay-input
+        v-model="passwordValue"
+        type="password">
+      </rs-pay-input>
     <p>value: {{passwordValue}}</p>
+    </div>
+    <hr>
     <table border="1" style="width:100%;">
       <thead>
         <tr>

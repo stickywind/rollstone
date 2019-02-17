@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import Views from '@/views'
 import ElementIcon from '@/views/element/icon'
 import ElementQuote from '@/views/element/quote'
+import ElementBadge from '@/views/element/badge'
 import ElementI18n from '@/views/element/i18n'
 import FormButton from '@/views/form/button'
 import FormSwitch from '@/views/form/switch'
@@ -27,6 +28,11 @@ export default new Router({
       path: '/ElementQuote',
       name: 'ElementQuote',
       component: ElementQuote
+    },
+    {
+      path: '/ElementBadge',
+      name: 'ElementBadge',
+      component: ElementBadge
     },
     {
       path: '/ElementI18n',
