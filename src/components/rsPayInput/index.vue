@@ -1,17 +1,16 @@
 <template>
   <div class="rsPayInput">
     <div class="payInputContainer">
-      <input type="text" class="realInput" maxlength="6" v-model="realValue" ref="input">
+      <input type="text" class="realInput" maxlength="6" ref="input" :value="realValue" @input="handleInput" @change="handleChange">
       <div class="shamInput">
-        <input type="text" maxlength="1" disabled v-model="shamInputArr[0]">
-        <input type="text" maxlength="1" disabled v-model="shamInputArr[1]">
-        <input type="text" maxlength="1" disabled v-model="shamInputArr[2]">
-        <input type="text" maxlength="1" disabled v-model="shamInputArr[3]">
-        <input type="text" maxlength="1" disabled v-model="shamInputArr[4]">
-        <input type="text" maxlength="1" disabled v-model="shamInputArr[5]">
+        <input :type="type" maxlength="1" disabled v-model="shamInputArr[0]">
+        <input :type="type" maxlength="1" disabled v-model="shamInputArr[1]">
+        <input :type="type" maxlength="1" disabled v-model="shamInputArr[2]">
+        <input :type="type" maxlength="1" disabled v-model="shamInputArr[3]">
+        <input :type="type" maxlength="1" disabled v-model="shamInputArr[4]">
+        <input :type="type" maxlength="1" disabled v-model="shamInputArr[5]">
       </div>
     </div>
-    <input type="text" :value="value">
   </div>
 </template>
 
@@ -22,40 +21,43 @@ export default {
     value: {
       type: String,
       default: ''
+    },
+    type: {
+      type: String,
+      default: 'text'
     }
   },
   data () {
     return {
-      realValue: '1',
+      realValue: '',
       shamInputArr: [],
       maxLength: 6
     }
   },
-  // computed: {
-  //   realValue () {
-  //     return this.value
-  //   }
-  // },
   mounted () {
-    this.realValue = this.value
-    console.log(this.realValue)
-    this.setValue()
+    this.setValue(this.value)
   },
   methods: {
-    setValue () {
-      this.realValue = this.realValue.replace(/\D/g, '')
+    setValue (value) {
+      this.realValue = value.replace(/\D/g, '')
       let valueStr = this.realValue
       for (let i = 0; i < this.maxLength; i++) {
         this.shamInputArr[i] = valueStr[i] ? valueStr[i] : ''
       }
+    },
+    handleInput (event) {
+      const value = event.target.value
+      // 设置当前值
+      // v-model :value 和 @input的语法糖
+      this.$emit('input', value)
+    },
+    handleChange (event) {
+      this.$emit('change', event.target.value)
     }
   },
   watch: {
     value (val) {
-      this.setValue()
-    },
-    realValue (val) {
-      this.setValue()
+      this.setValue(val)
     }
   }
 }
@@ -88,6 +90,7 @@ export default {
       position absolute
       z-index 0
       text-align center
+      margin 0 15px
       input
         padding 0
         width 42px

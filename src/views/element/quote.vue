@@ -1,6 +1,6 @@
 <template>
   <div class="element-quote">
-    <h4>1.</h4>
+    <h4>1.引用块</h4>
     <div>
       <rs-quote>111 <a href="">111</a></rs-quote>
     </div>
@@ -10,7 +10,7 @@
     <div>
       <rs-quote>Lorem ipsum dolor sit amet <a href="">consectetur</a> consectetur adipisicing elit. Porro incidunt dolores voluptatum quidem similique <a href="">similique</a>. Consectetur modi veniam similique, magni natus quia aut inventore quo culpa placeat! Adipisci, doloremque consequatur. Asperiores.</rs-quote>
     </div>
-    <h4>2.</h4>
+    <h4>2.类型设置颜色</h4>
     <div type="primary">
       <rs-quote>Lorem ipsum dolor sit amet <a href="">consectetur</a> consectetur adipisicing elit. Porro incidunt dolores voluptatum quidem similique <a href="">similique</a>. Consectetur modi veniam similique, magni natus quia aut inventore quo culpa placeat! Adipisci, doloremque consequatur. Asperiores.</rs-quote>
     </div>
