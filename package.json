@@ -16,7 +16,6 @@
   "dependencies": {
     "feather-icons": "^4.10.0",
     "font-awesome": "^4.7.0",
-    "hoek": "^6.1.2",
     "vue": "^2.5.2",
     "vue-feather-icon": "^1.2.0",
     "vue-feather-icons": "^4.10.0",

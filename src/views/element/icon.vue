@@ -14,6 +14,31 @@
         <p>icon-{{item.name}}</p>
       </div>
     </div>
+    <hr>
+    <table border="1" style="width:100%;">
+      <thead>
+        <tr>
+          <th>字段</th>
+          <th>类型</th>
+          <th>参数</th>
+          <th>说明</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>icon</td>
+          <td>String</td>
+          <td>-</td>
+          <td>图标图案</td>
+        </tr>
+        <tr>
+          <td>iconType</td>
+          <td>fa | iconfont</td>
+          <td>-</td>
+          <td>图标类型</td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 </template>
 
