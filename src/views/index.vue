@@ -10,6 +10,7 @@
     <router-link :to="{path: '/ElementIcon'}">rsIcon</router-link>
     <router-link :to="{path: '/ElementBadge'}">rsBadge</router-link>
     <router-link :to="{path: '/ElementBreadCrumb'}">rsBreadCrumb</router-link>
+    <router-link :to="{path: '/ElementBackTop'}">rsBackTop</router-link>
     <router-link :to="{path: '/ElementI18n'}">国际化</router-link>
   </div>
 </template>

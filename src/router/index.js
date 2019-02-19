@@ -5,6 +5,7 @@ import ElementIcon from '@/views/element/icon'
 import ElementQuote from '@/views/element/quote'
 import ElementBadge from '@/views/element/badge'
 import ElementBreadCrumb from '@/views/element/breadcrumb'
+import ElementBackTop from '@/views/element/backtop'
 import ElementI18n from '@/views/element/i18n'
 import FormButton from '@/views/form/button'
 import FormSwitch from '@/views/form/switch'
@@ -39,6 +40,11 @@ export default new Router({
       path: '/ElementBreadCrumb',
       name: 'ElementBreadCrumb',
       component: ElementBreadCrumb
+    },
+    {
+      path: '/ElementBackTop',
+      name: 'ElementBackTop',
+      component: ElementBackTop
     },
     {
       path: '/ElementI18n',

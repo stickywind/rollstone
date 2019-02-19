@@ -32,7 +32,7 @@ export default {
       &:hover
         color #409eff
   .rs-breadcrumbitem-separator
-    margin 0px 2px
+    margin 0px 6px
     font-size 14px
     line-height 1
     color #aaa
