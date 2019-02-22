@@ -6,10 +6,12 @@ import ElementQuote from '@/views/element/quote'
 import ElementBadge from '@/views/element/badge'
 import ElementBreadCrumb from '@/views/element/breadcrumb'
 import ElementBackTop from '@/views/element/backtop'
+import ElementTag from '@/views/element/tag'
 import ElementI18n from '@/views/element/i18n'
 import FormButton from '@/views/form/button'
 import FormSwitch from '@/views/form/switch'
 import FormPayInput from '@/views/form/payinput'
+import FormRate from '@/views/form/rate'
 
 Vue.use(Router)
 
@@ -47,6 +49,11 @@ export default new Router({
       component: ElementBackTop
     },
     {
+      path: '/ElementTag',
+      name: 'ElementTag',
+      component: ElementTag
+    },
+    {
       path: '/ElementI18n',
       name: 'ElementI18n',
       component: ElementI18n
@@ -66,6 +73,11 @@ export default new Router({
       path: '/FormPayInput',
       name: 'FormPayInput',
       component: FormPayInput
+    },
+    {
+      path: '/FormRate',
+      name: 'FormRate',
+      component: FormRate
     }
   ]
 })
