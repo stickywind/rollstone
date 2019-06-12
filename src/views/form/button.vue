@@ -270,6 +270,7 @@
       </rs-button>
     </div>
     <hr>
+    <h3>属性</h3>
     <table border="1" style="width:100%;">
       <thead>
         <tr>
@@ -318,6 +319,21 @@
         </tr>
       </tbody>
     </table>
+    <h3>方法</h3>
+    <table border="1" style="width:100%;">
+      <thead>
+        <tr>
+          <th>事件</th>
+          <th>说明</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>click</td>
+          <td>点击事件</td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 </template>
 
@@ -345,6 +361,8 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="stylus">
+.form-button
+  margin-bottom 200px
 .colspanDiv
   margin 10px 0px
 </style>
