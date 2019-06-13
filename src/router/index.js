@@ -12,6 +12,7 @@ import FormButton from '@/views/form/button'
 import FormSwitch from '@/views/form/switch'
 import FormPayInput from '@/views/form/payinput'
 import FormRate from '@/views/form/rate'
+import ElementAnimation from '@/views/element/animation'
 
 Vue.use(Router)
 
@@ -57,6 +58,11 @@ export default new Router({
       path: '/ElementI18n',
       name: 'ElementI18n',
       component: ElementI18n
+    },
+    {
+      path: '/ElementAnimation',
+      name: 'ElementAnimation',
+      component: ElementAnimation
     },
     // form
     {

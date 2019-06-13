@@ -18,8 +18,17 @@
           <rs-bread-crumb-item>工作细节</rs-bread-crumb-item>
         </rs-bread-crumb>
       </div>
+      <div>
+        <rs-bread-crumb separator=">">
+          <rs-bread-crumb-item><router-link :to="{path: '/ElementQuote'}"><rs-icon icon="bank"></rs-icon>首页</router-link></rs-bread-crumb-item>
+          <rs-bread-crumb-item><rs-icon icon="bank"></rs-icon>活动详情</rs-bread-crumb-item>
+          <rs-bread-crumb-item><rs-icon icon="bank"></rs-icon>社会实践</rs-bread-crumb-item>
+          <rs-bread-crumb-item><rs-icon icon="bank"></rs-icon>工作细节</rs-bread-crumb-item>
+        </rs-bread-crumb>
+      </div>
     </div>
     <hr>
+    <h3>属性</h3>
     <table border="1" style="width:100%;">
       <thead>
         <tr>
@@ -44,15 +53,18 @@
 <script>
 import rsBreadCrumb from '@/components/rsBreadCrumb'
 import rsBreadCrumbItem from '@/components/rsBreadCrumbItem'
+import rsIcon from '@/components/rsIcon'
 export default {
   name: 'elementBreadCrumb',
   components: {
     rsBreadCrumb,
-    rsBreadCrumbItem
+    rsBreadCrumbItem,
+    rsIcon
   }
 }
 </script>
 
 <style lang="stylus">
-// .element-breadcrumb
+.element-breadcrumb
+  margin-bottom 150px
 </style>

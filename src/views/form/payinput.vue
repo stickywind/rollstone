@@ -1,5 +1,5 @@
 <template>
-  <div class="formPayInput">
+  <div class="form-pay-input">
     <h4>1.文本输入</h4>
     <div>
       <rs-pay-input v-model="inputValue"></rs-pay-input>
@@ -14,6 +14,7 @@
     <p>value: {{passwordValue}}</p>
     </div>
     <hr>
+    <h3>属性</h3>
     <table border="1" style="width:100%;">
       <thead>
         <tr>
@@ -52,5 +53,6 @@ export default {
 </script>
 
 <style lang="stylus">
-
+.form-pay-input
+  margin-bottom 150px
 </style>

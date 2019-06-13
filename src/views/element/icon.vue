@@ -15,6 +15,7 @@
       </div>
     </div>
     <hr>
+    <h3>属性</h3>
     <table border="1" style="width:100%;">
       <thead>
         <tr>
@@ -33,8 +34,8 @@
         </tr>
         <tr>
           <td>iconType</td>
+          <td>String</td>
           <td>fa | iconfont</td>
-          <td>-</td>
           <td>图标类型</td>
         </tr>
       </tbody>
@@ -44,8 +45,8 @@
 
 <script>
 import rsIcon from '@/components/rsIcon'
-import fontawesomeData from './fontawesome.json'
-import iconfontData from './iconfont.json'
+import fontawesomeData from '@/components/rsIcon/fontawesome.json'
+import iconfontData from '@/components/rsIcon/iconfont.json'
 export default {
   name: 'elementIcon',
   components: {
@@ -70,6 +71,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="stylus">
 .element-icon
+  margin-bottom 150px
   .showIcon
     &>div
       display inline-block

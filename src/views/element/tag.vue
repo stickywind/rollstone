@@ -28,11 +28,18 @@
       <rs-tag type="warn" closeable>标签一</rs-tag>
       <rs-tag type="danger" closeable>标签一</rs-tag>
     </div>
-    <h4>5.自定义事件</h4>
+    <div>
+      <rs-tag size="mini" closeable>标签一</rs-tag>
+      <rs-tag size="small" closeable>标签一</rs-tag>
+      <rs-tag size="medium" closeable>标签一</rs-tag>
+      <rs-tag closeable>标签一</rs-tag>
+    </div>
+    <h4>5.关闭事件close</h4>
     <div>
       <rs-tag closeable @close="test">标签一</rs-tag>
     </div>
     <hr>
+    <h3>属性</h3>
     <table border="1" style="width:100%;">
       <thead>
         <tr>
@@ -66,6 +73,21 @@
           <td>Boolean</td>
           <td>-</td>
           <td>关闭</td>
+        </tr>
+      </tbody>
+    </table>
+    <h3>方法</h3>
+    <table border="1" style="width:100%;">
+      <thead>
+        <tr>
+          <th>事件</th>
+          <th>说明</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>close</td>
+          <td>关闭事件</td>
         </tr>
       </tbody>
     </table>

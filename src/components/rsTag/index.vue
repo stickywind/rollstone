@@ -73,9 +73,10 @@ export default {
       margin-left 4px
       font-size 12px
       border-radius 50%
-      padding 1px
+      padding 2px
       cursor pointer
       width 12px
+      text-align center
       &:hover
         color white
         background #409EFF

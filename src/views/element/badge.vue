@@ -1,11 +1,8 @@
 <template>
   <div class="element-badge">
-    <h4>1.徽章/标记</h4>
+    <h4>1.徽章/标记（字符串和数字）</h4>
     <div>
       <rs-badge :value="200" class="badge-item">
-        <rs-button hamon size="small">测试</rs-button>
-      </rs-badge>
-      <rs-badge :value="200" :max="99" class="badge-item">
         <rs-button hamon size="small">测试</rs-button>
       </rs-badge>
       <rs-badge value="new" :max="99" class="badge-item">
@@ -21,7 +18,13 @@
         <rs-button hamon size="small">测试</rs-button>
       </rs-badge>
     </div>
-    <h4>2.</h4>
+    <h4>2.超出数字最大值，设定max并且value是数字时</h4>
+    <div>
+      <rs-badge :value="200" :max="99" class="badge-item">
+        <rs-button hamon size="small">测试</rs-button>
+      </rs-badge>
+    </div>
+    <h4>3.标记类型</h4>
     <div>
       <rs-badge value="cold" class="badge-item">
         <rs-button hamon size="small">测试</rs-button>
@@ -36,13 +39,19 @@
         <rs-button hamon size="small">测试</rs-button>
       </rs-badge>
     </div>
-    <h4>3.</h4>
+    <h4>4.只有内容</h4>
     <div>
       <rs-badge value="hot" type="danger" class="badge-item">
         数据分析
       </rs-badge>
+    </div>
+    <h4>5.标记为点</h4>
+    <div>
       <rs-badge dot class="badge-item">
         数据分析
+      </rs-badge>
+      <rs-badge dot class="badge-item" value="new" type="danger">
+        <rs-button hamon size="small">测试</rs-button>
       </rs-badge>
       <rs-badge dot class="badge-item" value="new">
         <rs-button hamon size="small">测试</rs-button>
@@ -52,6 +61,7 @@
       </rs-badge>
     </div>
     <hr>
+    <h3>属性</h3>
     <table border="1" style="width:100%;">
       <thead>
         <tr>
@@ -76,7 +86,7 @@
         </tr>
         <tr>
           <td>value</td>
-          <td>String, Number</td>
+          <td>String | Number</td>
           <td>-</td>
           <td>显示内容</td>
         </tr>
@@ -107,6 +117,7 @@ export default {
 
 <style lang="stylus">
 .element-badge
+  margin-bottom 150px
   .badge-item
     margin-right 40px
 </style>

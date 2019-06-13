@@ -24,6 +24,7 @@
       <rs-quote type="danger">Lorem ipsum dolor sit amet <a href="">consectetur</a> consectetur adipisicing elit. Porro incidunt dolores voluptatum quidem similique <a href="">similique</a>. Consectetur modi veniam similique, magni natus quia aut inventore quo culpa placeat! Adipisci, doloremque consequatur. Asperiores.</rs-quote>
     </div>
     <hr>
+    <h3>属性</h3>
     <table border="1" style="width:100%;">
       <thead>
         <tr>
@@ -57,6 +58,7 @@ export default {
 
 <style lang="stylus">
 .element-quote
+  margin-bottom 150px
   &>div
     margin 10px 0px
 </style>

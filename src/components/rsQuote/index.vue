@@ -30,7 +30,7 @@ export default {
   .rs-quote-context
     border-radius 4px
     text-align left
-    &>div
+    & > div
       padding 6px 6px 6px 10px
     a
       text-decoration none
