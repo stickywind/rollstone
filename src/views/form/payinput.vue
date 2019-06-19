@@ -33,6 +33,21 @@
         </tr>
       </tbody>
     </table>
+    <h3>方法</h3>
+    <table border="1" style="width:100%;">
+      <thead>
+        <tr>
+          <th>事件</th>
+          <th>说明</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>change</td>
+          <td>输入改变</td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 </template>
 

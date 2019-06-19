@@ -1,6 +1,6 @@
 <template>
   <div class="pageIndex">
-    <img src="../assets/images/logo.png">
+    <img src="@/assets/images/logo1.png">
     <h2>Components</h2>
     <router-link :to="{path: '/FormButton'}">rsButton</router-link>
     <router-link :to="{path: '/FormSwitch'}">rsSwitch</router-link>

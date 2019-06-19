@@ -1,8 +1,17 @@
 <template>
   <div class="rsPayInput">
     <div class="payInputContainer">
-      <input type="text" class="realInput" maxlength="6" ref="input" :value="realValue" @input="handleInput" @change="handleChange">
-      <div class="shamInput">
+      <input
+        type="text"
+        class="realInput"
+        maxlength="6"
+        ref="input"
+        :value="realValue"
+        @input="handleInput"
+        @change="handleChange"
+        @focus="setInputActive(1)"
+        @blur="setInputActive(0)">
+      <div :class="[payInputActive, 'shamInput']">
         <input :type="type" maxlength="1" disabled v-model="shamInputArr[0]">
         <input :type="type" maxlength="1" disabled v-model="shamInputArr[1]">
         <input :type="type" maxlength="1" disabled v-model="shamInputArr[2]">
@@ -31,7 +40,8 @@ export default {
     return {
       realValue: '',
       shamInputArr: [],
-      maxLength: 6
+      maxLength: 6,
+      payInputActive: ''
     }
   },
   mounted () {
@@ -53,6 +63,13 @@ export default {
     },
     handleChange (event) {
       this.$emit('change', event.target.value)
+    },
+    setInputActive (flag) {
+      if (flag === 1) {
+        this.payInputActive = 'payInputActive'
+      } else {
+        this.payInputActive = ''
+      }
     }
   },
   watch: {
@@ -67,7 +84,7 @@ export default {
 .rsPayInput
   display inline-block
   .payInputContainer
-    width 282px
+    width 252px
     height 40px
     position relative
     text-align center
@@ -90,7 +107,6 @@ export default {
       position absolute
       z-index 0
       text-align center
-      margin 0 15px
       input
         padding 0
         width 42px
@@ -109,4 +125,12 @@ export default {
         &:last-child
           border-radius 0 7px 7px 0
           border-right  #C3C3C3 2px solid
+    .payInputActive input
+      border #409eff 1px solid
+      border-top #409eff 2px solid
+      border-bottom #409eff 2px solid
+      &:first-child
+        border-left #409eff 2px solid
+      &:last-child
+        border-right  #409eff 2px solid
 </style>

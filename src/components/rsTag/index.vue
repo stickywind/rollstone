@@ -32,10 +32,11 @@ export default {
       return this.type ? `rs-tag-${this.type}` : ''
     },
     tagHit () {
-      if (this.hit && this.type === '') {
-        return 'rs-tag-hit'
+      if (this.hit) {
+        let str = !this.type ? '' : `${this.type}-`
+        return `rs-tag-${str}hit`
       } else {
-        return `rs-tag-${this.type}-hit`
+        return ''
       }
     },
     typeClose () {
