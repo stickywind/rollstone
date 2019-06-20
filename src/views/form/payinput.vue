@@ -11,7 +11,25 @@
         v-model="passwordValue"
         type="password">
       </rs-pay-input>
-    <p>value: {{passwordValue}}</p>
+      <p>value: {{passwordValue}}</p>
+    </div>
+    <h4>3.数值改变事件change</h4>
+    <div>
+      <rs-pay-input
+        v-model="inputValueChange"
+        @change="handleChange"
+      >
+      </rs-pay-input>
+      <p>value: {{inputValueChange}}</p>
+    </div>
+    <div>
+      <rs-pay-input
+        v-model="passwordValueChange"
+        type="password"
+        @change="handleChange"
+      >
+      </rs-pay-input>
+      <p>value: {{passwordValueChange}}</p>
     </div>
     <hr>
     <h3>属性</h3>
@@ -61,7 +79,14 @@ export default {
   data () {
     return {
       inputValue: '',
-      passwordValue: ''
+      passwordValue: '',
+      inputValueChange: '',
+      passwordValueChange: ''
+    }
+  },
+  methods: {
+    handleChange (val) {
+      console.log(val)
     }
   }
 }

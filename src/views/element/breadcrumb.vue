@@ -18,6 +18,9 @@
           <rs-bread-crumb-item>工作细节</rs-bread-crumb-item>
         </rs-bread-crumb>
       </div>
+    </div>
+    <h4>2.带图标面包屑</h4>
+    <div>
       <div>
         <rs-bread-crumb separator=">">
           <rs-bread-crumb-item><router-link :to="{path: '/ElementQuote'}"><rs-icon icon="bank"></rs-icon>首页</router-link></rs-bread-crumb-item>

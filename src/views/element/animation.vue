@@ -1,6 +1,6 @@
 <template>
   <div class="element-animation">
-    <h4>1.动画过渡效果 fade slide-fade</h4>
+    <h4>1.动画过渡效果 渐变 滑动渐变 fade slide-fade</h4>
     <div class="showAni">
       <div>
         <rs-button hamon @click="showFadeAni()">click this</rs-button>
@@ -31,7 +31,7 @@
         </transition>
       </div>
     </div>
-    <h4>2.zoom</h4>
+    <h4>2.动画效果 缩放 zoom</h4>
     <div class="showAni">
       <div>
         <rs-button hamon @click="showZoomAni()">click this</rs-button>

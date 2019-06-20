@@ -1,27 +1,27 @@
 <template>
   <div class="element-tag">
-    <h4>1.type</h4>
+    <h4>1.标签类型</h4>
     <div>
       <rs-tag>标签一</rs-tag>
       <rs-tag type="success">标签一</rs-tag>
       <rs-tag type="warn">标签一</rs-tag>
       <rs-tag type="danger">标签一</rs-tag>
     </div>
-    <h4>2.size</h4>
+    <h4>2.标签尺寸</h4>
     <div>
       <rs-tag size="mini">标签一</rs-tag>
       <rs-tag size="small">标签一</rs-tag>
       <rs-tag size="medium">标签一</rs-tag>
       <rs-tag>标签一</rs-tag>
     </div>
-    <h4>3.hit</h4>
+    <h4>3.标签边框描边</h4>
     <div>
       <rs-tag hit>标签一</rs-tag>
       <rs-tag type="success" hit>标签一</rs-tag>
       <rs-tag type="warn" hit>标签一</rs-tag>
       <rs-tag type="danger" hit>标签一</rs-tag>
     </div>
-    <h4>4.closeable</h4>
+    <h4>4.标签添加关闭图标</h4>
     <div>
       <rs-tag closeable>标签一</rs-tag>
       <rs-tag type="success" closeable>标签一</rs-tag>
