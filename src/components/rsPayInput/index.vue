@@ -5,7 +5,9 @@
         type="number"
         class="realInput"
         ref="input"
+        style="ime-mode:disabled;"
         :value="realValue"
+        onkeypress="return (/[\d]/.test(String.fromCharCode(event.keyCode)))"
         @input="handleInput"
         @focus="setInputActive(1)"
         @blur="setInputActive(0)">
