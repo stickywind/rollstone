@@ -251,14 +251,41 @@
         危险按钮
       </rs-button>
     </div>
+    <h4>8.扩散动画按钮</h4>
+    <div class="colspanDiv">
+      <rs-button
+        spread>
+        默认按钮
+      </rs-button>
+      <rs-button
+        type="primary"
+        spread>
+        主要按钮
+      </rs-button>
+      <rs-button
+        type="success"
+        spread>
+        成功按钮
+      </rs-button>
+      <rs-button
+        type="warn"
+        spread>
+        警告按钮
+      </rs-button>
+      <rs-button
+        type="danger"
+        spread>
+        危险按钮
+      </rs-button>
+    </div>
     <div class="colspanDiv">
       <rs-button
         type="primary"
-        hamon>
+        spread>
         <rs-icon icon="check"></rs-icon> 主要按钮
       </rs-button>
     </div>
-    <h4>8.点击事件click</h4>
+    <h4>9.点击事件click</h4>
     <div>
       <rs-button @click="test()">
         默认按钮
@@ -316,6 +343,12 @@
           <td>Boolean</td>
           <td>false | true</td>
           <td>波纹Canvas</td>
+        </tr>
+        <tr>
+          <td>spread</td>
+          <td>Boolean</td>
+          <td>false | true</td>
+          <td>扩散Keyframes</td>
         </tr>
       </tbody>
     </table>

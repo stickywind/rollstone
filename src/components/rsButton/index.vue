@@ -1,6 +1,6 @@
 <template>
   <div class="rs-button">
-    <button :class="[rsBtnType, rsBtnSize, rsRound, rsCircle, rsDisabled]" @click="handleClick">
+    <button :class="[rsBtnType, rsBtnSize, rsRound, rsCircle, rsDisabled, rsSpread]" @click="handleClick">
       <canvas class="hamonCan" v-if="hamon" @click="rippleCanvas"></canvas>
       <slot></slot>
     </button>
@@ -22,7 +22,8 @@ export default {
     round: Boolean,
     circle: Boolean,
     disabled: Boolean,
-    hamon: Boolean
+    hamon: Boolean,
+    spread: Boolean
   },
   data () {
     return {
@@ -54,6 +55,9 @@ export default {
     },
     rsDisabled () {
       return this.disabled ? `rs-btn-disabled` : ''
+    },
+    rsSpread () {
+      return this.spread ? `rs-btn-spread` : ''
     }
   },
   methods: {
@@ -154,7 +158,7 @@ export default {
     padding 12px 20px
     font-size 14px
     border-radius 4px
-    overflow hidden
+    // overflow hidden
     position relative
   // 按钮颜色组
   button
@@ -284,4 +288,72 @@ export default {
     left 0
     width 100%
     height 100%
+  // 扩散spread
+  .rs-btn-spread
+    &:before
+      content ''
+      position absolute
+      top 0px
+      left 0px
+      right 0px
+      bottom 0px
+      border 3px solid
+      filter blur(.5px)
+      border-radius 4px
+      opacity 0
+    &:hover
+      &:before
+        animation spreadAni .8s linear 1
+  .rs-btn-normal.rs-btn-spread
+    &:before
+      border-color #dcdfe6
+  .rs-btn-primary.rs-btn-spread
+    &:before
+      border-color #409eff
+  .rs-btn-success.rs-btn-spread
+    &:before
+      border-color #67c23a
+  .rs-btn-warn.rs-btn-spread
+    &:before
+      border-color #e6a23c
+  .rs-btn-danger.rs-btn-spread
+    &:before
+      border-color #f56c6c
+
+@keyframes spreadAniReturn {
+  0% {
+    transform scale(1)
+    opacity 1
+  }
+  25% {
+    transform scaleY(1.1, 1.4)
+    opacity 0.5
+  }
+  50% {
+    transform scale(1.1, 1.4)
+    opacity 0
+  }
+  75% {
+    transform scale(1.1, 1.4)
+    opacity 0.5
+  }
+  100% {
+    transform scale(1)
+    opacity 1
+  }
+}
+@keyframes spreadAni {
+  0% {
+    transform scale(1)
+    opacity 1
+  }
+  50% {
+    transform scaleY(1.15, 1.4)
+    opacity 0.5
+  }
+  100% {
+    transform scale(1.15, 1.4)
+    opacity 0
+  }
+}
 </style>
